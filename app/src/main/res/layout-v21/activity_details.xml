@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/splash"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/app_background_height"
+                android:background="@color/colorAccent"
+                android:scaleType="centerCrop"/>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_icon_height_from_top"
+                android:paddingLeft="@dimen/app_item_margin"
+                android:paddingRight="@dimen/app_item_margin"
+                android:paddingBottom="@dimen/app_item_padding"
+                android:paddingTop="@dimen/app_item_padding"
+                android:layout_centerHorizontal="true"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                android:id="@+id/app_image_layout"
+                android:elevation="3dp">
+
+                <LinearLayout
+                    android:id="@+id/full_view"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/app_item_padding"
+                    android:background="@drawable/rectangle" >
+
+                    <kody.com.trudigitalexample.views.SquareImageView
+                        android:id="@+id/app_image"
+                        android:layout_width="@dimen/app_icon_size"
+                        android:layout_height="@dimen/app_icon_size"
+                        android:padding="@dimen/app_item_padding"/>
+                </LinearLayout>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/app_title_text_size"
+                android:text="@string/app_title"
+                android:id="@+id/app_title"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_below="@id/app_image_layout"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/app_description_short"
+                android:id="@+id/app_description_short"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/app_title" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/install_button"
+                android:id="@+id/install_button"
+                android:layout_alignParentBottom="false"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/app_description_short"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_alignParentTop="false"
+                android:onClick="install" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/app_description_long"
+                android:id="@+id/app_description_long"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_below="@+id/install_button" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

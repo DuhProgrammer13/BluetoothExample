@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/app_item_margin"
+    android:paddingRight="@dimen/app_item_margin"
+    android:paddingBottom="@dimen/app_item_padding"
+    android:paddingTop="@dimen/app_item_padding"
+    android:onClick="onClick"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+
+    <LinearLayout
+        android:id="@+id/full_view"
+        android:orientation="vertical" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/app_item_padding"
+        android:background="@drawable/rectangle" >
+
+        <kody.com.trudigitalexample.views.SquareImageView
+            android:id="@+id/app_image"
+            android:layout_width="@dimen/app_icon_size"
+            android:layout_height="@dimen/app_icon_size"
+            android:padding="@dimen/app_item_padding"/>
+
+        <LinearLayout
+            android:id="@+id/app_info"
+            android:layout_width="@dimen/app_icon_size"
+            android:layout_height="@dimen/app_info_height"
+            android:orientation="vertical"
+            android:padding="@dimen/app_item_padding" >
+
+            <TextView
+                android:id="@+id/app_title"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/app_item_title_size"
+                android:text="Hello"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/app_description_short"
+                android:textSize="@dimen/info_text_size"
+                android:textColor="@color/dark_grey"
+                android:layout_width="match_parent"
+                android:text="It is me"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</FrameLayout>

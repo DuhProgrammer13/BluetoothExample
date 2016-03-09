@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="LayeredLinearLayout">
+        <attr name="rows" format="integer" />
+        <attr name="cols" format="integer" />
+    </declare-styleable>
+</resources>
